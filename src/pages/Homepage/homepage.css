@@ -1,0 +1,18 @@
+.space_component {
+  padding: 25px;
+  width: 70%;
+}
+
+.button_to_details {
+  background-color: rgba(0, 89, 255, 0.808);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.title-spaces {
+  padding: 20px;
+  font-weight: 300;
+}

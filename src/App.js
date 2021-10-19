@@ -7,6 +7,8 @@ import Loading from "./components/Loading";
 import MessageBox from "./components/MessageBox";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import HomePage from "./pages/Homepage/HomePage";
+import DetailsPage from "./pages/Detailspage/DetailsPage";
 
 import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
@@ -15,7 +17,7 @@ import { Jumbotron } from "react-bootstrap";
 
 const Home = () => (
   <Jumbotron>
-    <h1>Home</h1>
+    <h1>HomePage</h1>
   </Jumbotron>
 );
 const Other = () => (
@@ -38,7 +40,8 @@ function App() {
       <MessageBox />
       {isLoading ? <Loading /> : null}
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/spaces/:id" component={DetailsPage} />
+        <Route exact path="/" component={HomePage} />
         <Route path="/other" component={Other} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
